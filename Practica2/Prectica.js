@@ -26,5 +26,19 @@
     console.log(mapeado);
 }
 {
-    
+    const personas = [
+        {nombre: "Ana", edad: 22},
+        {nombre: "Luis", edad: 35},
+        {nombre: "Maria", edad: 22},
+    ];
+
+    const encontrar = personas.find(persona => persona.nombre === "Luis");
+    console.log(encontrar);
+
+    personas.forEach(persona => {
+        console.log(`${persona.nombre} tiene ${persona.edad} años`)
+    })
+
+    const edades = personas.reduce((acumulador, persona) => acumulador + persona.edad, 0);
+    console.log(edades);
 }
