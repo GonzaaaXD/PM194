@@ -1,38 +1,64 @@
 import React, { useEffect, useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { ImageBackground } from 'react-native';
-import * as SplashScreen from 'expo-splash-screen';
-
-// 1. Configuramos el SplashScreen
-SplashScreen.preventAutoHideAsync();
-
+import { StyleSheet, Text, View, ScrollView, ImageBackground } from 'react-native';
 
 export default function App() {
-  const [appReady, setAppReady] = useState(false);//appReady es un estado que indica si la app ya terminó su "carga"
-
-  useEffect(() => {
-    setTimeout(async () => {//espera y es asincrona para usar await
-      setAppReady(true);//cambia de estado
-      await SplashScreen.hideAsync();//quitar el splash despues de los 2 
-    }, 2000); 
-  }, []);
-
- 
-  return (
-    <ImageBackground 
-      source={require('./assets/qro.png')} 
-      style={styles.background}
-      resizeMode="cover"
-    >
-      <View style={styles.container}>
-        <Text style={styles.title}>Mi App</Text>
-        <Text style={styles.subtitle}>
-          {appReady ? '¡Carga completa!' : 'Cargando...'}
-        </Text>
-      </View>
-    </ImageBackground>
+  return(
+    <ScrollView contentContainerStyle={styles.background} showsVerticalScrollIndicator={false} horizontal={true}>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+      <Text>Hola amigue mundo</Text>
+    </ScrollView>
   );
-}
+};
 
 // 4. Estilos simples
 const styles = StyleSheet.create({
@@ -40,6 +66,8 @@ const styles = StyleSheet.create({
     flex: 1,
     width: '100%',
     height: '100%',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   container: {
     flex: 1,
@@ -56,5 +84,9 @@ const styles = StyleSheet.create({
   subtitle: {
     color: 'white',
     fontSize: 18,
+  },
+  overlay:{
+    flex: 1,
+    width:'100%'
   }
 });
